@@ -4,13 +4,8 @@ This tiny app was created to test the functionality of the Cordless Media API in
 
 ## Getting Started
 
+Serve the `index.html` file from an HTTP server. You can use the `serve` package to do this:
+
 ```bash
-pnpm install
-
-# Run in dev mode
-pnpm dev
-
-# OR build and run in production mode
-pnpm build
-pnpm preview
+npx serve
 ```
