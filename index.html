@@ -1,24 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/tailwind.css" rel="stylesheet" />
     <title>Cordless Media Ad Test</title>
-
-    <style>
-      .ad {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 12px;
-        background-color: #f3f4f6;
-        border: 1px solid #d1d5dc;
-        color: #99a1af;
-        max-width: 768px;
-        margin: 64px auto;
-        height: 90px;
-      }
-    </style>
 
     <!-- Cordless Media -->
     <script
@@ -28,23 +14,7 @@
     ></script>
   </head>
   <body>
-    <div class="ad" id="put-an-ad-here-please"></div>
-
-    <script>
-      setTimeout(() => {
-        const cmWrapper = window.cmWrapper || {}
-        cmWrapper.que = cmWrapper.que || []
-
-        console.log(
-          '-------- RequestING ad units -------- cmWrapper:',
-          cmWrapper
-        )
-        cmWrapper.que?.push(() => {
-          cmWrapper.ads.defineUnit('put-an-ad-here-please')
-          cmWrapper.ads.requestUnits()
-          //cmWrapper.ads.refreshUnits()
-        })
-      }, 1000)
-    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
